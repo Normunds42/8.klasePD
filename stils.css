@@ -1,12 +1,25 @@
 body {
   background-color: lightblue;
 }
+  div {
+            border: 1px solid gray;
+            padding: 8px;
+            background-color: white;
+        }
 
-h1 {
-  text-align: center;
-}
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            color: #4CAF50;
+        }
 
-p {
-  font-family: verdana;
-  font-size: 20px;
-}
+        p {
+            text-indent: 50px;
+            text-align: justify;
+            letter-spacing: 3px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #008CBA;
+        }
