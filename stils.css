@@ -1,9 +1,9 @@
 body {
   background-color: lightblue;
 }
-  div {
-            border: 1px solid gray;
-            padding: 8px;
+        div {
+            border: 2px solid gray;
+            padding: 5px;
             background-color: white;
         }
 
@@ -15,8 +15,8 @@ body {
 
         p {
             text-indent: 50px;
-            text-align: justify;
-            letter-spacing: 3px;
+            text-align: center; /* Centrē tekstu */
+            letter-spacing: 2px;
         }
 
         a {
