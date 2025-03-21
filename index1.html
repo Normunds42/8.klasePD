@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>datnes_nolasisana</title>
-<meta charset="utf8"/>
-<link href="stils.css" rel="stylesheet" type="text/css"
+    <title>datnes_nolasisana</title>
+    <meta charset="utf-8"/>
+    <link href="stils.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<center><h2>8a_puiši</h2></center>
-<center><br><p>lzvēlieties datu datni:</p></br></center>
+    <center><h2>8a_puiši</h2></center>
+    <center><p>Izvēlieties datu datni:</p></center>
+    <center><input type="file" id="datne" onchange="atveertDatni()" />
+    <div id="izvade"></div></center>
+    <center><a href="index1.html"><b>8a meitenes</b></a></center>
 
+    <script>
+        function nolasiitSaturu(evt) {
+            var dati = [];
+            var summa = 0;
+            var datnesSaturs;
+            datnesSaturs = evt.target.result;
+            dati = datnesSaturs.split(",");
+            for (var i = 0; i < dati.length; i++) {
+                summa = summa + Number(dati[i]);
+            }
+            izvade.innerHTML = dati.join(", ");
+        }
 
-<center><input type="file" id="datne" onchange="atveertDatni()" /></center>
+        function atveertDatni() {
+            var d = datne.files[0];
+            if (d) {
+                atveertLasiisanai(d);
+            }
+        }
 
+        function atveertLasiisanai(d) {
+            var r = new FileReader();
+            r.readAsText(d);
+            r.onload = nolasiitSaturu;
+            r.onerror = kluudasApstraade;
+        }
 
-
-
-<script> src="script.js"></script>
-  <a href="index.html"><b> 8a meitenes </b></a>
+        function kluudasApstraade(evt) {
+            if (evt.target.error.name == "NotReadableError") {
+                alert("Datnes nolasīšanas laikā konstatēta kļūda");
+            }
+        }
+    </script>
 </body>
 </html>
