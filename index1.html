@@ -6,11 +6,24 @@
     <link href="stils.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-    <center><h2>8a_puiši</h2></center>
-    <center><p>Izvēlieties datu datni:</p></center>
-    <center><input type="file" id="datne" onchange="atveertDatni()" />
-    <div id="izvade"></div></center>
-    <center><a href="index.html"><b>8a meitenes</b></a></center>
+    <style>
+        div {
+            background-color: lightgrey;
+            width: 300px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 20px;
+        }
+    </style>
+    <center>
+        <div>
+            <h2>meitenes</h2>
+            <p>Izvēlieties datu datni:</p>
+            <input type="file" id="datne" onchange="atveertDatni()" />
+            <div id="izvade"></div>
+        </div>
+        <a href="index.html"><b>8a puiši</b></a>
+    </center>
 
     <script>
         function nolasiitSaturu(evt) {
